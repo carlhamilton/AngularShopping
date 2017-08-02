@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 
  export class ProductListComponent {//make the file available to use
      pageTitle: string = 'Product List';
+     imageWidth: number = 50;
+     imageMargin: number = 2;
+     showImage: boolean = false;
+     listFilter: string = 'cart';
      products: any []= [//List of products to be used in our table.
 
          {
@@ -63,5 +67,8 @@ import { Component } from '@angular/core';
 
 
      ];
+toggleImage(): void {
+    this.showImage = !this.showImage;
+}
 
 }
