@@ -1,3 +1,8 @@
+Application built with Angular and HTML to list products and search for their code.
+Useful for those who need to list products on a website but don't want to use just tables.
+
+The app is built to be scalable for much larger operations.
+
 1) Open a command prompt in the project's root directory (AngularShopping)
 
 2) Type: `npm install`
