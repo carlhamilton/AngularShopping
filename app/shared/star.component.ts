@@ -1,4 +1,4 @@
-import { Component, OnChanges, Input, Output } from '@angular/core';
+import { Component, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'chtsi-star',
@@ -9,14 +9,15 @@ import { Component, OnChanges, Input, Output } from '@angular/core';
 export class StarComponent implements OnChanges {
    @Input() rating: number;
     starWidth: number;
-    @Output() notify: EventEmitter<string> =
+    @Output() ratingClicked: EventEmitter<string> =
     new EventEmitter<string>();
-
-    onClick() {
-        this.notify.emit('clicked!');
-    }
+   
+    
 
 ngOnChanges(): void {
     this.starWidth = this.rating * 86/5;
+}
+onClick() {
+    this.ratingClicked.emit(`The Rating ${this.rating} was clicked!`);
 }
 }
